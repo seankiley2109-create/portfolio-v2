@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\seank\\\\Documents\\\\2026\\\\Portfolio Website\\\\v2\" -Recurse -File)",
+      "Bash(Select-Object FullName, Length)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Format-Table -AutoSize)"
+    ]
+  }
+}
