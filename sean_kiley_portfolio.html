@@ -10,6 +10,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
+/* ─── BACK NAV ──────────────────────────────────────────────────────────────── */
+.back-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 201;
+  height: 28px; background: var(--bg2); border-bottom: 1px solid var(--brd);
+  display: flex; align-items: center; justify-content: center; gap: 0;
+  font-size: 10px; color: var(--text3); letter-spacing: 0.1em; text-transform: uppercase;
+}
+.back-bar a {
+  color: var(--text2); text-decoration: none; padding: 0 14px; height: 28px;
+  display: flex; align-items: center; transition: color 0.2s, background 0.2s;
+  border-right: 1px solid var(--brd);
+}
+.back-bar a:first-child { border-left: 1px solid var(--brd); }
+.back-bar a:hover { color: var(--green); background: rgba(51,232,122,0.04); }
+.back-bar .bc-cur { color: var(--text3); padding: 0 14px; }
+
 /* ─── RESET ─────────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
@@ -81,7 +97,7 @@ body::after {
 
 /* ─── TOP HEADER ────────────────────────────────────────────────────────────── */
 .top-header {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  position: fixed; top: 28px; left: 0; right: 0; z-index: 200;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 var(--pad); height: 46px;
   background: rgba(12,21,16,0.97);
@@ -133,7 +149,7 @@ body::after {
 .bn-icon { font-size: 15px; margin-bottom: 3px; line-height: 1; }
 
 /* ─── MAIN LAYOUT ───────────────────────────────────────────────────────────── */
-main { padding-top: 46px; padding-bottom: 72px; }
+main { padding-top: 74px; padding-bottom: 72px; }
 
 /* ─── HERO ──────────────────────────────────────────────────────────────────── */
 #hero {
@@ -451,6 +467,7 @@ footer .g { color: var(--green); }
   :root { --pad: 40px; }
   main { padding-bottom: 0; }
 
+  main { padding-top: 78px; }
   .top-header { height: 50px; padding: 0 40px; }
   .th-brand { font-size: 24px; }
 
@@ -505,6 +522,13 @@ footer .g { color: var(--green); }
 </style>
 </head>
 <body>
+
+<!-- BACK NAV RIBBON -->
+<div class="back-bar">
+  <a href="index.html">← Identity Card</a>
+  <a href="about.html">Profile Overview</a>
+  <span class="bc-cur">Full CV</span>
+</div>
 
 <!-- TOP HEADER -->
 <header class="top-header">

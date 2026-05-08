@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sean Kiley | IT Engineer & Infrastructure Specialist | Cape Town</title>
+<meta name="description" content="Sean Kiley is a Cape Town-based IT and infrastructure engineer specialising in data protection, enterprise backup, cybersecurity, and AI-powered business platforms. Open to new opportunities.">
+<meta property="og:title" content="Sean Kiley | IT Engineer | Cape Town, South Africa">
+<meta property="og:description" content="I keep infrastructure running and data safe — enterprise backup, cloud security, and AI-powered platforms. Based in Cape Town.">
+<meta property="og:type" content="profile">
+<meta name="keywords" content="IT engineer Cape Town, infrastructure engineer South Africa, IBM Storage Protect, data backup specialist, cloud engineer, AI platform developer, Druva MSP">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0C1510;--bg2:#101C14;--surf:#162218;
+  --brd:#1E3525;--brd2:#2A5038;
+  --green:#33E87A;--g-lt:#66FFAA;--g-dim:#1ABD56;--g-dark:#0D5530;
+  --g-glow:rgba(51,232,122,0.12);
+  --text:#9AE8B5;--text2:#527A62;--text3:#2E4A38;
+  --amber:#F5C800;--cyan:#33FFE8;
+  --vt:'VT323',monospace;--mono:'Share Tech Mono',monospace;
+  --pad:20px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:14px;line-height:1.72;overflow-x:hidden;padding-top:52px}
+body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.05) 3px,rgba(0,0,0,0.05) 4px);pointer-events:none;z-index:9000;animation:scanDrift 12s linear infinite}
+@keyframes scanDrift{to{background-position:0 60px}}
+
+/* ── NAV ──────────────────────────────────────────────────────────────────── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  height:52px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 var(--pad);
+  background:rgba(12,21,16,0.97);border-bottom:1px solid var(--brd);
+  backdrop-filter:blur(20px);
+}
+.nav-brand{font-family:var(--vt);font-size:22px;color:var(--green);text-shadow:0 0 8px rgba(51,232,122,0.4);text-decoration:none}
+.nav-links{display:flex;align-items:center}
+.nl{
+  font-size:11px;color:var(--text2);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;
+  padding:0 14px;height:52px;display:flex;align-items:center;
+  border-left:1px solid var(--brd);transition:color 0.2s,background 0.2s;
+}
+.nl:last-child{border-right:1px solid var(--brd)}
+.nl:hover{color:var(--green);background:rgba(51,232,122,0.04)}
+.nl.hi{color:var(--green);border-color:var(--brd2)}
+.nl.hi:hover{background:var(--g-glow)}
+
+/* ── HERO ─────────────────────────────────────────────────────────────────── */
+.hero{
+  min-height:calc(100svh - 52px);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:64px var(--pad) 48px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(51,232,122,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(51,232,122,0.035) 1px,transparent 1px);
+  background-size:40px 40px;animation:gridDrift 8s linear infinite;
+  mask-image:radial-gradient(ellipse 80% 70% at 20% 50%,rgba(0,0,0,0.5),transparent 90%);
+}
+@keyframes gridDrift{to{background-position:40px 40px}}
+.hero-tag{font-size:11px;color:var(--text3);letter-spacing:0.2em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.hero-tag::before{content:'';width:24px;height:1px;background:var(--g-dim)}
+.hero-name{
+  font-family:var(--vt);font-size:clamp(52px,13vw,92px);
+  color:var(--green);line-height:0.9;letter-spacing:0.02em;
+  text-shadow:0 0 12px rgba(51,232,122,0.4),0 0 30px rgba(51,232,122,0.15);
+  margin-bottom:20px;
+}
+.hero-headline{font-size:clamp(16px,3vw,22px);color:var(--text);line-height:1.45;max-width:580px;margin-bottom:14px}
+.hero-sub{font-size:14px;color:var(--text2);line-height:1.85;max-width:540px;margin-bottom:36px}
+.hero-sub strong{color:var(--text)}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:12px;letter-spacing:0.07em;
+  padding:14px 22px;text-decoration:none;border:1px solid;min-height:48px;
+  transition:background 0.2s,box-shadow 0.2s,color 0.2s;
+}
+.btn:active{transform:scale(0.97)}
+.btn-p{background:var(--green);color:var(--bg);border-color:var(--green)}
+.btn-p:hover{background:var(--g-lt);box-shadow:0 0 20px rgba(51,232,122,0.4)}
+.btn-g{background:transparent;color:var(--text);border-color:var(--brd2)}
+.btn-g:hover{border-color:var(--green);color:var(--green);background:var(--g-glow)}
+.hero-badges{display:flex;gap:14px;flex-wrap:wrap}
+.hbadge{display:flex;flex-direction:column;gap:2px;padding:12px 20px;border:1px solid var(--brd);background:var(--surf)}
+.hbadge-n{font-family:var(--vt);font-size:32px;color:var(--green);line-height:1}
+.hbadge-l{font-size:10px;color:var(--text2);letter-spacing:0.1em;text-transform:uppercase}
+
+/* ── SECTIONS ─────────────────────────────────────────────────────────────── */
+section{padding:72px var(--pad)}
+.alt{background:var(--bg2)}
+.sec-lbl{font-size:11px;color:var(--text3);letter-spacing:0.22em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.sec-lbl::before{content:'';width:24px;height:1px;background:var(--brd2)}
+.sec-title{
+  font-family:var(--vt);font-size:clamp(34px,7vw,54px);
+  color:var(--green);line-height:1;letter-spacing:0.03em;
+  text-shadow:0 0 8px rgba(51,232,122,0.3);margin-bottom:12px;
+}
+.sec-intro{font-size:14px;color:var(--text2);line-height:1.85;max-width:640px;margin-bottom:40px}
+.sec-intro strong{color:var(--text)}
+
+/* Reveal */
+.rev{opacity:0;transform:translateY(16px);transition:opacity 0.55s,transform 0.55s}
+.rev.in{opacity:1;transform:none}
+.d1{transition-delay:0.09s}.d2{transition-delay:0.18s}.d3{transition-delay:0.27s}
+
+/* ── WHAT I DO ────────────────────────────────────────────────────────────── */
+.do-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.do-card{
+  border:1px solid var(--brd);background:var(--surf);padding:28px;
+  position:relative;overflow:hidden;transition:border-color 0.25s,box-shadow 0.25s;
+}
+.do-card:hover{border-color:var(--brd2);box-shadow:0 0 16px rgba(51,232,122,0.07)}
+.do-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--green),var(--g-dim))}
+.do-icon{font-size:26px;margin-bottom:14px}
+.do-title{font-family:var(--vt);font-size:26px;color:var(--green);margin-bottom:8px}
+.do-body{font-size:13px;color:var(--text2);line-height:1.85}
+.do-body strong{color:var(--text)}
+.do-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.do-tag{font-size:10px;color:var(--text3);border:1px solid var(--brd);padding:3px 8px;letter-spacing:0.04em}
+
+/* ── ABOUT ────────────────────────────────────────────────────────────────── */
+.about-cols{display:flex;flex-direction:column;gap:32px}
+.about-photo{
+  width:100%;max-width:240px;aspect-ratio:3/4;
+  border:1px solid var(--brd2);background:var(--surf);
+  display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+}
+.about-photo span{font-family:var(--vt);font-size:72px;color:var(--green);text-shadow:0 0 20px rgba(51,232,122,0.4);position:relative;z-index:2}
+.about-photo::after{
+  content:'';position:absolute;inset:0;
+  background-image:repeating-linear-gradient(0deg,rgba(0,0,0,0.12) 0,transparent 1px,transparent 4px),
+    repeating-linear-gradient(90deg,rgba(0,0,0,0.12) 0,transparent 1px,transparent 4px);
+  background-size:5px 5px;z-index:3;
+}
+.about-text p{font-size:14px;color:var(--text2);line-height:1.9;margin-bottom:18px}
+.about-text p strong{color:var(--text)}
+.hl{color:var(--green)}
+
+/* ── PROJECTS ─────────────────────────────────────────────────────────────── */
+.proj-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.proj{border:1px solid var(--brd);background:var(--surf);padding:24px;position:relative;overflow:hidden;transition:border-color 0.25s}
+.proj:hover{border-color:var(--brd2)}
+.proj::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform 0.4s}
+.proj:hover::before{transform:scaleX(1)}
+.proj-num{font-size:10px;color:var(--text3);letter-spacing:0.1em;margin-bottom:8px}
+.proj-title{font-family:var(--vt);font-size:22px;color:var(--green);margin-bottom:8px}
+.proj-desc{font-size:13px;color:var(--text2);line-height:1.85}
+.proj-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.proj-tag{font-size:10px;color:var(--text3);background:var(--bg2);border:1px solid var(--brd);padding:2px 8px}
+
+/* ── TRUST ────────────────────────────────────────────────────────────────── */
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.trust-card{border:1px solid var(--brd);background:var(--surf);padding:20px;text-align:center}
+.trust-n{font-family:var(--vt);font-size:48px;color:var(--green);text-shadow:0 0 10px rgba(51,232,122,0.3);line-height:1}
+.trust-l{font-size:11px;color:var(--text2);letter-spacing:0.12em;text-transform:uppercase;margin-top:4px}
+.trust-sub{font-size:11px;color:var(--text3);margin-top:6px}
+
+/* ── CONTACT ──────────────────────────────────────────────────────────────── */
+.contact-big{
+  font-family:var(--vt);font-size:clamp(48px,12vw,80px);
+  color:var(--green);line-height:0.9;letter-spacing:0.02em;margin-bottom:24px;
+  text-shadow:0 0 14px rgba(51,232,122,0.35),0 0 30px rgba(51,232,122,0.15);
+}
+.contact-big .dim{color:var(--text3);text-shadow:none}
+.clinks{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.clink{
+  display:flex;align-items:center;gap:12px;font-size:14px;letter-spacing:0.05em;
+  border:1px solid var(--brd2);color:var(--text);padding:16px 18px;text-decoration:none;
+  min-height:52px;transition:border-color 0.2s,color 0.2s,background 0.2s;
+}
+.clink:hover{border-color:var(--green);color:var(--green);background:var(--g-glow)}
+.clink-ico{color:var(--green);font-size:16px}
+.contact-note{font-size:12px;color:var(--text3);line-height:1.7}
+
+/* ── CV STRIP ─────────────────────────────────────────────────────────────── */
+.cv-strip{
+  background:var(--surf);border-top:1px solid var(--brd2);border-bottom:1px solid var(--brd2);
+  padding:32px var(--pad);display:flex;flex-direction:column;gap:18px;align-items:flex-start;
+}
+.cv-strip p{font-size:13px;color:var(--text2);line-height:1.8;max-width:560px}
+.cv-strip strong{color:var(--text)}
+
+/* ── FOOTER ───────────────────────────────────────────────────────────────── */
+footer{background:var(--bg2);border-top:1px solid var(--brd);padding:16px var(--pad);font-size:10px;color:var(--text3);text-align:center;letter-spacing:0.08em}
+footer .g{color:var(--green)}
+
+/* ── DESKTOP ──────────────────────────────────────────────────────────────── */
+@media(min-width:768px){
+  :root{--pad:48px}
+  .do-grid{grid-template-columns:repeat(3,1fr)}
+  .about-cols{flex-direction:row;align-items:flex-start;gap:56px}
+  .about-photo{flex-shrink:0;width:220px}
+  .proj-grid{grid-template-columns:1fr 1fr}
+  .trust-grid{grid-template-columns:repeat(4,1fr)}
+  .clinks{flex-direction:row}
+  .cv-strip{flex-direction:row;align-items:center;justify-content:space-between}
+}
+@media(min-width:1100px){:root{--pad:64px}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">KILEY_SYS</a>
+  <div class="nav-links">
+    <a href="index.html" class="nl">← Home</a>
+    <a href="#contact" class="nl">Contact</a>
+    <a href="sean_kiley_portfolio.html" class="nl hi">Full CV →</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-tag">IT &amp; Infrastructure Engineer · Cape Town, South Africa</div>
+  <h1 class="hero-name">SEAN<br>KILEY</h1>
+  <p class="hero-headline">I keep infrastructure running, data protected, and technology working for your business.</p>
+  <p class="hero-sub">
+    Based in <strong>Cape Town</strong>, I specialise in enterprise data protection, cloud backup, cybersecurity compliance, and building AI-powered digital platforms. Whether your business needs its systems managed reliably, or you're a team looking for a sharp infrastructure engineer — I'd like to hear from you.
+  </p>
+  <div class="hero-ctas">
+    <a href="#contact" class="btn btn-p">Get In Touch</a>
+    <a href="#what-i-do" class="btn btn-g">See What I Do ↓</a>
+  </div>
+  <div class="hero-badges">
+    <div class="hbadge"><div class="hbadge-n">17</div><div class="hbadge-l">Certifications</div></div>
+    <div class="hbadge"><div class="hbadge-n">2</div><div class="hbadge-l">Degrees</div></div>
+    <div class="hbadge"><div class="hbadge-n">3+</div><div class="hbadge-l">Years Active</div></div>
+  </div>
+</section>
+
+<!-- WHAT I DO -->
+<section id="what-i-do" class="alt">
+  <div class="sec-lbl">Services &amp; Expertise</div>
+  <h2 class="sec-title rev">What I Do</h2>
+  <p class="sec-intro rev">I bridge the gap between complex infrastructure and real business outcomes. Here's where I spend most of my time:</p>
+  <div class="do-grid">
+
+    <div class="do-card rev">
+      <div class="do-icon">🔒</div>
+      <div class="do-title">Data Protection &amp; Recovery</div>
+      <div class="do-body">
+        If something goes wrong tonight — ransomware, hardware failure, accidental deletion — <strong>can your business recover?</strong> I manage enterprise backup environments so the answer is always yes. I administer <strong>IBM Storage Protect</strong> and <strong>Druva MSP</strong> across multi-tenant cloud and on-premises setups, designing policies, automations, and recovery procedures so your data is always restorable when it counts.
+      </div>
+      <div class="do-tags">
+        <span class="do-tag">IBM Storage Protect</span>
+        <span class="do-tag">Druva MSP</span>
+        <span class="do-tag">Disaster Recovery</span>
+        <span class="do-tag">SaaS Backup</span>
+        <span class="do-tag">Policy Automation</span>
+      </div>
+    </div>
+
+    <div class="do-card rev d1">
+      <div class="do-icon">🛡️</div>
+      <div class="do-title">Security &amp; Compliance</div>
+      <div class="do-body">
+        Knowing who has access to what — and catching anything suspicious before it becomes a crisis. I implement <strong>data activity monitoring</strong> (IBM Guardium), <strong>endpoint device management</strong> (IBM MaaS360), and <strong>identity protection</strong> across client environments. I also handle POPIA compliance, Fortinet VPN management, and remote device management — keeping your team connected and your perimeter tight.
+      </div>
+      <div class="do-tags">
+        <span class="do-tag">IBM Guardium</span>
+        <span class="do-tag">IBM MaaS360</span>
+        <span class="do-tag">POPIA Compliance</span>
+        <span class="do-tag">Fortinet VPN</span>
+        <span class="do-tag">Endpoint Management</span>
+      </div>
+    </div>
+
+    <div class="do-card rev d2">
+      <div class="do-icon">⚡</div>
+      <div class="do-title">Web Platforms &amp; Applied AI</div>
+      <div class="do-body">
+        I build the digital tools that connect your business operations — from lead capture and payment processing to AI-powered customer assistants. Currently building on <strong>Next.js 15</strong> with integrations into monday.com, Paystack, Sage, and Vertex AI. I also build <strong>internal AI knowledge systems</strong> using vector search, giving your team instant and accurate answers from your own documentation — no hallucinations.
+      </div>
+      <div class="do-tags">
+        <span class="do-tag">Next.js 15</span>
+        <span class="do-tag">Vertex AI</span>
+        <span class="do-tag">Qdrant</span>
+        <span class="do-tag">API Integration</span>
+        <span class="do-tag">GCP</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT ME -->
+<section id="about">
+  <div class="sec-lbl">Background</div>
+  <h2 class="sec-title rev">A Bit About Me</h2>
+  <div class="about-cols">
+    <div class="about-photo rev"><span>SK</span></div>
+    <div class="about-text">
+      <p class="rev">I'm <strong>Sean Kiley</strong>, an IT and infrastructure engineer currently at <span class="hl">Montana Data Company</span> in Cape Town, where I manage enterprise backup environments, implement security tooling, and build internal platforms that connect every part of the business.</p>
+      <p class="rev d1">I studied <strong>Management Information Systems</strong> at Stellenbosch University before completing an <strong>Honours degree in Informatics</strong> — which is a rigorous way of learning how technology and organisations interact, and how to build systems that actually serve people rather than just technically existing. My honours research explored how generative AI is reshaping higher education.</p>
+      <p class="rev d2">What drives me is the intersection of <span class="hl">reliability and intelligence</span> — infrastructure that doesn't need constant babysitting, and systems smart enough to help people do better work. Whether that means a client's data is recoverable after an incident, or an internal AI assistant that gives your team accurate answers in seconds.</p>
+      <p class="rev d3">I hold <strong>17 professional certifications</strong> across IBM, Druva, and cloud platforms, and I'm continuously adding more. Currently studying for the <strong>Microsoft MS-102</strong> (M365 Administrator Associate). I don't collect certs for the sake of it — each one represents a system I now know well enough to be accountable for.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="alt">
+  <div class="sec-lbl">Recent Work</div>
+  <h2 class="sec-title rev">What I've Built</h2>
+  <p class="sec-intro rev">A few of the projects I've worked on recently, explained without the jargon:</p>
+  <div class="proj-grid">
+    <div class="proj rev">
+      <div class="proj-num">01 / 04</div>
+      <h3 class="proj-title">Montana DC — Business Operating System</h3>
+      <p class="proj-desc">Built a full business platform for Montana Data Company. It handles client leads coming in, payment processing, financial reporting, and an AI-powered customer assistant — all connected. When a lead submits a form, it flows into the CRM, triggers a quote process, connects to accounting, and can be followed up by AI. One platform, everything in sync.</p>
+      <div class="proj-tags"><span class="proj-tag">Next.js 15</span><span class="proj-tag">AI Integration</span><span class="proj-tag">Payments</span><span class="proj-tag">Live in Production</span></div>
+    </div>
+    <div class="proj rev d1">
+      <div class="proj-num">02 / 04</div>
+      <h3 class="proj-title">AI Email Triage — TU Dresden Hackathon</h3>
+      <p class="proj-desc">Participated in a TU Dresden hackathon with Otto Group. In 4 days, our team built an AI system that reads incoming customer emails, figures out how urgent they are, strips out sensitive personal information, and drafts a suggested reply — saving hours of manual triage time daily. Built on Google Cloud's AI infrastructure.</p>
+      <div class="proj-tags"><span class="proj-tag">AI / LLMs</span><span class="proj-tag">Python</span><span class="proj-tag">Google Cloud</span><span class="proj-tag">Hackathon</span></div>
+    </div>
+    <div class="proj rev d2">
+      <div class="proj-num">03 / 04</div>
+      <h3 class="proj-title">Internal AI Knowledge Base</h3>
+      <p class="proj-desc">Building a self-hosted knowledge system using vector search technology. Instead of a generative AI that may invent answers, this system finds and retrieves accurate information from your actual documentation. Useful for internal support, client onboarding, and technical reference — reliable answers, every time.</p>
+      <div class="proj-tags"><span class="proj-tag">Vector Search</span><span class="proj-tag">Applied AI</span><span class="proj-tag">Python</span><span class="proj-tag">In Progress</span></div>
+    </div>
+    <div class="proj rev d3">
+      <div class="proj-num">04 / 04</div>
+      <h3 class="proj-title">GCP Portfolio &amp; Analytics Platform</h3>
+      <p class="proj-desc">Deployed and maintain a cloud-hosted portfolio and analytics platform on Google Cloud Run — demonstrating real-world application of data analysis, cloud infrastructure, and applied AI in a live environment.</p>
+      <div class="proj-tags"><span class="proj-tag">Google Cloud</span><span class="proj-tag">Analytics</span><span class="proj-tag">Live</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SIGNALS -->
+<section id="credentials">
+  <div class="sec-lbl">Credentials &amp; Track Record</div>
+  <h2 class="sec-title rev">Why Trust Me</h2>
+  <p class="sec-intro rev">Experience backed by formal credentials — not just years on the job, but verified, current, industry-recognised qualifications:</p>
+  <div class="trust-grid rev">
+    <div class="trust-card">
+      <div class="trust-n">17</div>
+      <div class="trust-l">Certifications</div>
+      <div class="trust-sub">IBM, Druva, TU Dresden</div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-n">2</div>
+      <div class="trust-l">Degrees</div>
+      <div class="trust-sub">Stellenbosch University</div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-n">3+</div>
+      <div class="trust-l">Years Active</div>
+      <div class="trust-sub">Infrastructure &amp; Dev</div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-n">∞</div>
+      <div class="trust-l">Still Learning</div>
+      <div class="trust-sub">MS-102 next up</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="alt">
+  <div class="sec-lbl">Get In Touch</div>
+  <div class="contact-big rev"><span class="dim">LET'S</span><br>TALK</div>
+  <p class="sec-intro rev">Whether you need infrastructure managed, a web platform built, or you're hiring for an IT engineering role — I'd like to hear from you.</p>
+  <div class="clinks rev">
+    <a href="https://linkedin.com/in/sean-kiley-2096a31b2" target="_blank" rel="noopener" class="clink">
+      <span class="clink-ico">↗</span> LinkedIn
+    </a>
+    <a href="https://sean-kiley-portfolio-85195716212.us-west1.run.app" target="_blank" rel="noopener" class="clink">
+      <span class="clink-ico">↗</span> GCP Portfolio
+    </a>
+    <a href="mailto:sean@montanadc.com" class="clink">
+      <span class="clink-ico">✉</span> sean@montanadc.com
+    </a>
+  </div>
+  <div class="contact-note rev">> Cape Town, South Africa &nbsp;·&nbsp; Open to infrastructure, cloud &amp; applied AI roles</div>
+</section>
+
+<!-- CV STRIP -->
+<div class="cv-strip">
+  <p><strong>Are you a technical reader?</strong> The full CV goes into detail — every certification, every technology in the stack, full work history with specifics, education modules, and all projects with technical context. Built for engineers and technical hiring managers who want the depth.</p>
+  <a href="sean_kiley_portfolio.html" class="btn btn-p">View Full Technical CV →</a>
+</div>
+
+</main>
+
+<footer>
+  <span>Sean Kiley &nbsp;·&nbsp; <span class="g">IT &amp; Infrastructure Engineer</span> &nbsp;·&nbsp; Cape Town 2026</span>
+</footer>
+
+<script>
+const io=new IntersectionObserver(e=>{
+  e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('in')});
+},{threshold:0.07,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
