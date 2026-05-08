@@ -118,7 +118,7 @@ body::after{
   border:1px solid var(--brd2);background:var(--bg);
   display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
 }
-.c-photo span{font-family:var(--vt);font-size:34px;color:var(--green);text-shadow:0 0 10px rgba(51,232,122,0.6);position:relative;z-index:2}
+.c-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:1}
 .c-photo::after{
   content:'';position:absolute;inset:0;
   background-image:repeating-linear-gradient(0deg,rgba(0,0,0,0.18) 0,transparent 1px,transparent 3px),
@@ -199,7 +199,7 @@ body::after{
           <div class="c-lvl">INFRA L3</div>
         </div>
         <div class="c-main">
-          <div class="c-photo"><span>SK</span></div>
+          <div class="c-photo"><img src="headshot.jpg" alt="Sean Kiley"></div>
           <div>
             <div class="c-name">SEAN<br>KILEY</div>
             <div class="c-role">IT &amp; Infrastructure Engineer</div>
